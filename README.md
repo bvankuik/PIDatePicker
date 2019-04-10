@@ -1,34 +1,12 @@
-# [DEPRECATED] PIDatePicker
+# PIDatePicker
 
-⚠️ **This repository is no longer maintained or supported. New pull requests will not be reviewed.** ⚠️
+⚠️ **This repository is no longer maintained or supported by the original author. However I've made the code compiling in Swift 5. Installation via Cocoapods will yield the old code, but using "pod install" inside the example project will work. To use in your own project, just copy the files from the Pod/Classes directory.** ⚠️
 
 ![PIDatePicker](https://raw.github.com/prolificinteractive/pidatepicker/master/Images/PIDatePicker.gif)
 
 ## Description
 A custom UIDatePicker object that allows design customization of various user interface attributes such as font, color, etc. This pod
 aims to replicate the default UIDatePicker functionality while adding additional customization in the user interface.
-
-## Usage
-
-PIDatePicker is available through [Cocoapods](https://cocoapods.org/?q=PIDatePicker). 
-
-The source code is available on [GitHub](https://github.com/prolificinteractive/PIDatePicker). 
-
-To use in your projects, simply add the following line to your `Podfile`:
-
-```ruby
-pod "PIDatePicker", '~> 0.1.0'
-```
-
-You can then use `PIDatePicker` by importing it into your files:
-
-```swift
-import PIDatePicker
-```
-
-Because this project was written in Swift, your project must have a minimum target of iOS 8.0 or greater. Cocoapods
-does not support Swift pods for previous iOS versions. If you need to use this on a previous version of iOS, 
-import the code files directly into your project or by using git submodules.
 
 ## Customization
 
@@ -58,14 +36,8 @@ A class can implement `PIDatePickerDelegate` and the following method to respond
 func pickerView(pickerView: PIDatePicker, didSelectRow row: Int, inComponent component: Int)
 ```
 
-## Contributing
-
-To report a bug or enhancement request, feel free to file an issue under the respective heading. 
-
-If you wish to contribute to the project, fork this repo and submit a pull request. 
-
 ## License
 
-PIDatePicker is available under the MIT license. See the LICENSE file for more info.
+PIDatePicker is available under the MIT license. 
 
 
