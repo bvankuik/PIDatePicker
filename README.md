@@ -5,8 +5,13 @@
 ![PIDatePicker](https://raw.github.com/prolificinteractive/pidatepicker/master/Images/PIDatePicker.gif)
 
 ## Description
-A custom UIDatePicker object that allows design customization of various user interface attributes such as font, color, etc. This pod
-aims to replicate the default UIDatePicker functionality while adding additional customization in the user interface.
+Partial implementation of a UIDatePicker object that allows design
+customization of various user interface attributes such as font, color, etc.
+This pod aims to replicate the default UIDatePicker functionality while adding
+additional customization in the user interface.
+
+Only supports picking the date, doesn't support other modes like date/time or
+stopwatch.
 
 ## Customization
 
