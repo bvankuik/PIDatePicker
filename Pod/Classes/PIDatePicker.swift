@@ -177,14 +177,14 @@ public class PIDatePicker: UIControl, UIPickerViewDataSource, UIPickerViewDelega
             return
         }
         
-        let firstComponentOrderingString = componentOrdering[componentOrdering.characters.index(componentOrdering.startIndex, offsetBy: 0)]
-        let lastComponentOrderingString = componentOrdering[componentOrdering.characters.index(componentOrdering.startIndex, offsetBy: componentOrdering.characters.count - 1)]
+        let firstComponentOrderingString = componentOrdering[componentOrdering.index(componentOrdering.startIndex, offsetBy: 0)]
+        let lastComponentOrderingString = componentOrdering[componentOrdering.index(componentOrdering.startIndex, offsetBy: componentOrdering.count - 1)]
         
         var characterSet = CharacterSet(charactersIn: String(firstComponentOrderingString) + String(lastComponentOrderingString))
         characterSet = characterSet.union(CharacterSet.whitespacesAndNewlines).union(CharacterSet.punctuationCharacters)
 
         componentOrdering = componentOrdering.trimmingCharacters(in: characterSet)
-        let remainingValue = componentOrdering[componentOrdering.characters.index(componentOrdering.startIndex, offsetBy: 0)]
+        let remainingValue = componentOrdering[componentOrdering.index(componentOrdering.startIndex, offsetBy: 0)]
         
         guard
             let firstComponent = PIDatePickerComponents(rawValue: firstComponentOrderingString),
