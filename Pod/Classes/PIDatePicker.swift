@@ -520,7 +520,7 @@ public class PIDatePicker: UIControl, UIPickerViewDataSource, UIPickerViewDelega
         let widthBuffer = 25.0
         
         let calendarComponent = self.componentAtIndex(component)
-        let stringSizingAttributes = [NSFontAttributeName : self.font]
+        let stringSizingAttributes = [NSAttributedString.Key.font : self.font]
         var size = 0.01
         
         if calendarComponent == .month {
@@ -528,17 +528,17 @@ public class PIDatePicker: UIControl, UIPickerViewDataSource, UIPickerViewDelega
             
             // Get the length of the longest month string and set the size to it.
             for symbol in dateFormatter.monthSymbols as [String] {
-                let monthSize = NSString(string: symbol).size(attributes: stringSizingAttributes)
+                let monthSize = NSString(string: symbol).size(withAttributes: stringSizingAttributes)
                 size = max(size, Double(monthSize.width))
             }
         } else if calendarComponent == .day{
             // Pad the day string to two digits
             let dayComponentSizingString = NSString(string: "00")
-            size = Double(dayComponentSizingString.size(attributes: stringSizingAttributes).width)
+            size = Double(dayComponentSizingString.size(withAttributes: stringSizingAttributes).width)
         } else if calendarComponent == .year  {
             // Pad the year string to four digits.
             let yearComponentSizingString = NSString(string: "00")
-            size = Double(yearComponentSizingString.size(attributes: stringSizingAttributes).width)
+            size = Double(yearComponentSizingString.size(withAttributes: stringSizingAttributes).width)
         }
         
         // Add the width buffer in order to allow the picker components not to run up against the edges
